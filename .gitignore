@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.Python
 venv/
 env/
 .venv/
@@ -9,15 +11,19 @@ env/
 # Environment variables
 .env
 .env.local
+.env.production
 
 # Database
 *.db
 *.sqlite
 *.sqlite3
+league_analytics.db
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # Operating System
 .DS_Store
@@ -25,7 +31,24 @@ Thumbs.db
 
 # Logs
 *.log
+logs/
 
 # Testing
 .coverage
 .pytest_cache/
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Data files (but keep structure)
+backend/data/*.json
+backend/data/*.csv
+!backend/data/README.md
+!backend/data/.gitkeep
+
+# Backups
+database/backups/*
+!database/backups/.gitkeep

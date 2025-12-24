@@ -93,12 +93,44 @@ This project provides tools for fans, analysts, and competitors to explore teams
 
 ## Getting Started
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/league-analytics-hub.git
-   cd league-analytics-hub
+```bash
+git clone https://github.com/yourusername/league-analytics-hub.git
+cd league-analytics-hub
+```
 
-2. Install dependencies (requirements file will be provided).
+2. Create virtual environment:
+```bash
+python -m venv venv
 
-3. Start the Flask server for backend APIs.
+# Activate it
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+```
 
-4. Open the frontend to explore dashboards and analytics.
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+```bash
+# Copy example env file
+cp backend/config/.env.example backend/config/.env
+
+# Edit .env and add your Riot API key
+```
+
+5. Initialize database:
+```bash
+cd backend
+python scripts/init_database.py
+```
+
+6. Run the application:
+```bash
+python run.py
+```
+
+Visit: http://localhost:5000
