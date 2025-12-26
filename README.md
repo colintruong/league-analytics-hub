@@ -19,8 +19,9 @@ This project provides tools for fans, analysts, and competitors to explore teams
   - LCK (Korea)  
   - LPL (China)  
   - LEC (Europe)  
-  - LTA (Americas)  
-  - LCP (Pacific)  
+  - LCS (North America)  
+  - LCP (Pacific)
+  - CBLOL (Brazil)
 
 ### Player Analytics
 - Individual player rankings across multiple seasons.  

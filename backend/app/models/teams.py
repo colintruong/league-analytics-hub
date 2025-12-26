@@ -11,7 +11,7 @@ class Team(db.Model):
     code = db.Column(db.String(10), nullable = False, unique = True)   # e.g., T1, GEN
     region = db.Column(db.String(10), nullable = False, index = True) # e.g., LCK, LPL
     current_elo = db.Column(db.Integer, default = 1500)
-    peak_elo= db.Column(db.Integer, default = 1500)
+    peak_elo = db.Column(db.Integer, default = 1500)
     global_rank = db.Column(db.Integer)     # e.g., 1, 2, 3
     regional_rank = db.Column(db.Integer)   # e.g., 1, 2, 3 within their region
     
