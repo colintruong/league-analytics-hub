@@ -1,17 +1,58 @@
 {% extends "base.html" %} {% block content %}
-<div class="d-flex">
-  <div class="border border-danger">
-    {% block tournament_name %}{% endblock %}
-  </div>
-
-  <div class="ms-auto my-auto" style="margin-right: 10%;">
-    <div class="card" style="width: 18rem;">
+<div class="container-fluid mt-3">
+  <div class="row">
+    <!-- Left row -->
+    <div class="col-10 border border-danger">
+      <!-- Tournament name -->
+      <div class="border border-danger">
+        {% block tournament_name %}{% endblock %}
+      </div>
+      <!-- Format -->
+      <div class="mt-3 ms-1">
+        <div class="border border-danger">
+          {% block format %}
+          <h4>Format</h4>
+          <ul>
+            <li>???</li>
+            <li>???</li>
+          </ul>
+          {% endblock %}
+        </div>
+        <!-- Teams -->
+        <div class="border border-danger">
+          {% block teams %}
+          <h4>Teams</h4>
+          
+          {% endblock %}
+        </div>
+      </div>
     </div>
-    {% block information %}
-    <h4>Tournament name</h4>
-    {% endblock %}
+    <!-- Right row -->
+    <div class="col-2 border border-danger">
+      <!-- Infocard about the league's current tournament information -->
+      <div class="card ms-auto" style="width: 18rem; margin-right: 1%">
+        {% block infocard %}
+        <h4 class="card-title text-center">Tournament name</h4>
+        <img
+          src="{{ url_for('static', filename='gigachad.jpg') }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Region</li>
+          <li class="list-group-item">Event type</li>
+          <li class="list-group-item">Location</li>
+          <li class="list-group-item">Tier</li>
+          <li class="list-group-item">Start date</li>
+          <li class="list-group-item">End date</li>
+          <li class="list-group-item">Prize pool</li>
+          <li class="list-group-item">Status</li>
+          <li class="list-group-item">Patch</li>
+        </ul>
+        {% endblock %}
+      </div>
+    </div>
   </div>
 </div>
-
 
 {% endblock %}
